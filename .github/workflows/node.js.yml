@@ -50,8 +50,8 @@ jobs:
   deploy:
     needs: [build, test]
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/seggs'
-
+    if: github.ref == 'refs/heads/main'
+4
     strategy:
       matrix:
         node-version: [12.x]
