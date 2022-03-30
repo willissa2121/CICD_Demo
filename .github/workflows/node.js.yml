@@ -5,8 +5,8 @@ name: Node.js CI
 on:
   push:
     branches: [ main, feature/sw ]
-    tags:
-      - 'v*'
+    # tags:
+    #   - 'v*'
   pull_request:
     branches: [ main ]
 
@@ -48,8 +48,8 @@ jobs:
   deploy:
     needs: [build, test]
     runs-on: ubuntu-latest
-    # if: github.ref == 'refs/heads/main'
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: github.ref == 'refs/heads/main'
+    # if: startsWith(github.ref, 'refs/tags/v')
     strategy:
       matrix:
         node-version: [12.x]
