@@ -5,9 +5,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: [ main ]]
 
 jobs:
   build:
@@ -52,7 +50,8 @@ on:
   push:
     # Pattern matched against refs/tags
     tags:        
-      - 'v*'           # Push events to every tag not containing /
+      - 'v*'
+jobs:         # Push events to every tag not containing /
   deploy:
     branches: [main]
     needs: [build, test]
