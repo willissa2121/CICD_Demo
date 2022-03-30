@@ -47,13 +47,6 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm run test
-
-on:
-  push:
-    # Pattern matched against refs/tags
-    tags:        
-      - 'v*'  
-jobs:         # Push events to every tag not containing /
   deploy:
     branches: [main]
     needs: [build, test]
