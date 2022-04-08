@@ -1,9 +1,34 @@
-# CICD_Demo
+# Scott Willis CICD Demo
 
-## This is a simple node application desinged to show CICD capability and how it can help with the development process
-## In this demo we will cover
-### Building the application with CICD
-### Testing the application with CICD
-### Deploying the application with CICD
+This is a demo application to test CICD practices with building, testing and deploying. 
 
-## All of these features will be tested using github pipelines, and we will use logical stops to help the development process
+## Prerequisites
+- Node 12 or later versions
+- Bash
+
+## Installation
+
+```bash
+cd CICD_demo
+npm init -y
+npm install
+```
+
+## Usage
+
+To run appliucation
+```bash
+node app.js
+```
+To run the test suite
+```bash
+npm run test
+```
+
+## to create a merge request
+
+```bash
+git checkout -b <BRANCH_NAME>
+git add .
+git commit -m "<MESSAGE>"
+git push --set-upstream origin <BRANCH_NAME>
